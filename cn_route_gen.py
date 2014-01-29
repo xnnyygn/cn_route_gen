@@ -2,9 +2,9 @@
 
 import re
 import math
-import urllib # to download file
+import urllib
 import os
-import sys    # to determine platform 
+import sys
 import itertools
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))

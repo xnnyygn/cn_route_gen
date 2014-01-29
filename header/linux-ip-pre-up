@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
+
+PREV_GW=`ip route show | grep '^default' | sed -e 's/default via \([^ ]*\).*/\1/'`
+
+if [ $PREV_GW == '' ]; then
+    exit 0
+fi
+
+if [ ! -e /tmp/vpn_prev_gw ]; then
+    echo $PREV_GW > /tmp/vpn_prev_gw
+fi

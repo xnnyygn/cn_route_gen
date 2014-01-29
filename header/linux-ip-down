@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
+
+PREV_GW=`cat /tmp/vpn_prev_gw`

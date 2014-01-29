@@ -1,0 +1,9 @@
+#!/bin/sh
+
+export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
+
+if [ ! -e /tmp/vpn_prev_gw ]; then
+  exit 0
+fi
+
+PREV_GW=`cat /tmp/vpn_prev_gw`
